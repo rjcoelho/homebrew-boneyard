@@ -4,7 +4,7 @@ class DynamodbLocal < Formula
   homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html"
   url "https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz"
   version "2016-05-17"
-  sha256 "832d474316c9d092de8c24885e69c9be9e22b9807e7383e0de6f247e44601a90"
+  sha256 "d79732d7cd6e4b66fbf4bb7a7fc06cb75abbbe1bbbfb3d677a24815a1465a0b2"
 
   bottle :unneeded
 
