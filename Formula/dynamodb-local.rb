@@ -16,7 +16,7 @@ class DynamodbLocal < Formula
     var/"log/dynamodb-local.log"
   end
 
-  def bin_wrapper; <<-EOS.undent
+  def bin_wrapper; <<~EOS
     #!/bin/sh
     cd #{data_path} && exec java -Djava.library.path=#{libexec}/DynamodbLocal_lib -jar #{libexec}/DynamoDBLocal.jar "$@"
     EOS
@@ -32,7 +32,7 @@ class DynamodbLocal < Formula
     data_path.mkpath
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     DynamoDB Local supports the Java Runtime Engine (JRE) version 6.x or
     newer; it will not run on older JRE versions.
 
@@ -47,7 +47,7 @@ class DynamodbLocal < Formula
 
   plist_options :manual => "#{HOMEBREW_PREFIX}/bin/dynamodb-local"
 
-  def plist; <<-EOS.undent
+  def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
